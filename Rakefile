@@ -214,8 +214,3 @@ def diff(a, b)
     diff[key] = [a[key], b[key]] unless a[key] == b[key]
   end
 end
-print "\r\e[0K%d:%d  %g%%" % [correct, incorrect, (correct.to_f/total.to_f)*100]
-  $stdout.flush
-rescue URI::InvalidURIError
-break if total >= LIMIT
-
